@@ -2,7 +2,201 @@
 redirect_from: taxfreegan/
 ---
 
-<html>
-  <head>Coming soon...</head>
-  <body>WACV 2024 Coming soon...</body>
-</html>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	
+	<!-- Required meta tags -->
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	<!-- Bootstrap JS with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+
+	<style>
+	body {
+		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
+
+	p {
+		text-align: justify;
+		-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+		hyphens: auto;
+	}
+
+	a.link-primary {
+  		color: darkred !important;
+  		text-decoration: none;
+	}
+
+	a.link-primary:hover {
+		color: red !important;
+		text-decoration: underline;
+	}
+
+	a.link-primary:active {
+		color:red !important;
+		text-decoration: underline;
+	}
+
+	a.link-primary:visited {
+		color: darkred !important;
+		text-decoration: none;
+	}
+
+	.logo {
+        width: 20em;
+        padding: 1em 1em 1em 1em;
+    }
+	</style>
+
+	
+	<title>Removing the Quality Tax in Controllable Face Generation (WACV 2024)</title>
+
+</head>
+
+<body> 
+
+	<header class="py-5">
+		<div class="container text-center">
+			<h1 class="text">Removing the Quality Tax in Controllable Face Generation</h1>
+			<h2 class="text-muted">A simple model for StyleGAN-level quality with full 3DMM control</h2>
+			<h4 class="text-muted">WACV 2024 & AI for Content Creation Workshop @ CVPR 2023</h4>
+		</div>
+	</header>
+
+  <div class="container text-center">
+		<div class="row justify-content-md-center">
+      <div class="col-lg-2">
+          <div class="row justify-content-md-center">
+            <p>Yiwen Huang</p>
+          </div>
+          <div class="row justify-content-md-center">
+            <p>Zhiqiu Yu</p>
+          </div>
+          <div class="row justify-content-md-center">
+            <p>Xinjie Yi</p>
+          </div>
+          <div class="row justify-content-md-center">
+            <p>Yue Wang</p>
+          </div>
+          <div class="row justify-content-md-center">
+            <p><a class="link-primary" href="https://jamestompkin.com/" target="_blank"  style="text-decoration:none">James Tompkin</a></p>
+          </div>
+      </div>
+      <div class="col-lg-3">
+        <img class="logo" src="images/logos/BrownCSLogo.png" alt="Brown University Computer Science">
+      </div>
+    </div>
+  </div>
+	
+	<div class="container text-center">
+    <br><br>
+		<figure class="figure">
+			<IMG src="./images/results.png" class="figure-img img-fluid rounded" width=80%>
+			<figcaption class="figure-caption">Conditional 2D generation results via 3DMM controllable parameters, including both subtle expression changes and large pose and illumination changes.</figcaption>
+		</figure>
+	</div>
+
+	<br><br>
+	
+  <div class="container w-75">
+		<h3>Abstract</h3>
+		<p>
+			3DMM conditioned face generation has gained traction due to its well-defined controllability; however, the trade-off is lower sample quality: Previous works such as DiscoFaceGAN and 3D-FM GAN show a significant FID gap compared to the unconditional StyleGAN, suggesting that there is a quality tax to pay for controllability. In this paper, we challenge the assumption that quality and controllability cannot coexist. To pinpoint the previous issues, we mathematically formalize the problem of 3DMM conditioned face generation. Then, we devise simple solutions to the problem under our proposed framework. This results in a new model that effectively removes the quality tax between 3DMM conditioned face GANs and the unconditional StyleGAN.
+		</p>
+	</div>
+
+  <br><br>
+  <div class="container text-center">
+
+  </div>
+
+	<div class="container text-center">
+		<div class="row justify-content-md-center">
+		<div class="col-lg-6">
+			<figure class="figure">
+				<IMG src="./images/teaser.png" class="figure-img img-fluid rounded" width=70%>
+				<figcaption class="figure-caption">
+					Our simple approach uses differentiable renderer <em>RDR</em> and 3DMM parameter estimator <em>FR</em> with only two objectives.
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="col-lg-6">
+			<figure class="figure">
+				<IMG src="./images/teaser2.png" class="figure-img img-fluid rounded" width=70%>
+				<figcaption class="figure-caption">Our overall model architecture.
+				</figcaption>
+			</figure>
+		</div>
+		</div>
+	</div>
+
+	
+	<br><br>
+	<div class="container text-center">
+		<div class="row justify-content-md-center">
+			<div class="col-auto">
+				<a class="link-primary" href="https://openaccess.thecvf.com/content/WACV2024/papers/Huang_Removing_the_Quality_Tax_in_Controllable_Face_Generation_WACV_2024_paper.pdf" target="_self"><img src="./images/paper_thumbnail.jpg" style="width:200px;"><br>
+				<a class="link-primary" href="https://openaccess.thecvf.com/content/WACV2024/papers/Huang_Removing_the_Quality_Tax_in_Controllable_Face_Generation_WACV_2024_paper.pdf" target="_self">Paper (OpenAccess)</a>
+			</div>
+			<div class="col-auto">
+				<a class="link-primary" href="https://openaccess.thecvf.com/content/WACV2024/supplemental/Huang_Removing_the_Quality_WACV_2024_supplemental.pdf" target="_self"><img src="./images/supplemental_thumbnail.jpg" style="width:200px;"><br>
+				<a class="link-primary" href="https://openaccess.thecvf.com/content/WACV2024/supplemental/Huang_Removing_the_Quality_WACV_2024_supplemental.pdf" target="_self">Supplemental Material</a>
+			</div>
+    </div>
+	</div>
+
+
+  <br><br>
+  <div class="container text-center w-50">
+    <iframe src="https://onedrive.live.com/embed?resid=E10E204FB9E6F665%21244232&authkey=!AICiCesInOQucv8&em=2" width="550" height="334" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+
+	<br><br>
+	<div class="container w-50">
+		<h3>Bibtex Reference</h3>
+		<PRE>@InProceedings{Huang_2024_WACV,<BR> author = {Huang, Yiwen and Yu, Zhiqiu and Yi, Xinjie and Wang, Yue and Tompkin, James},<BR> title = {Removing the Quality Tax in Controllable Face Generation},<BR> booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},<BR> month = {January},<BR> year = {2024},<BR> pages = {5364-5373}<BR> }<BR>
+		</PRE>
+	</div>
+		
+<!-- 
+	<div class="container w-50">
+        <h3>Related Projects</h3>
+        <ul>
+            <li>ICCV 2017 - <a class="link-primary" href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Kim_Predictor_Combination_at_ICCV_2017_paper.pdf">Predictor combination at test time</a>&mdash;This paper presents an algorithm that improves a predictor of a (target) learning task based on the (reference) predictors of potentially relevant
+tasks, without having access to the internals of individual predictors.</li>
+			<li>ECCV 2020 - <a class="link-primary" href="https://arxiv.org/pdf/2007.08012.pdf">Combining task predictors via enhancing joint predictability</a>&mdash; This paper presents an algorithm that improves a target task by jointly assessing the relevance of all references via adopting a Bayesian framework.</li>
+        </ul>
+    </div>
+ -->
+	<br>
+
+	<div class="container w-50">
+    <h3>Acknowledgements</h3>
+		<p>
+			We would like to thank Yu Deng for generous correspondence and assistance in correctly reimplementing Disentanglement Score metrics. Funding was provided by a Brown Office of the Vice President for Research Seed award.
+		</p>
+  </div>
+
+  <footer>
+    <p class="text-center">
+      Thank you to <a class="link-primary" href="http://getbootstrap.com">Bootstrap</a> for the Webpage design tools.
+    </p>
+  </footer>
+
+</body>
+
+</HTML>
+
